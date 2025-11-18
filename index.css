@@ -1,0 +1,341 @@
+/* ========== RESET ========== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+    transition:0.3s ease;
+}
+
+/* ========== DARK / LIGHT MODE ========== */
+body{
+    background: linear-gradient(135deg, #001f4d, #ffffff);
+    color:white;
+}
+
+body.dark{
+    background:#121212;
+    color:white;
+}
+/* ========== HEADER ========== */
+header{
+    background-color: #001f4d;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:25px 50px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
+}
+header a{
+    margin-left:25px;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+.menu-btn{
+    display: none;
+    color: white;
+}
+.header-btns {
+    background-color: #001a3d; /* very dark blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 1px white solid;
+}
+.header-btns:hover {
+    background-color: white; /* slightly lighter on hover */
+    color: #001a3d;
+}
+
+header a:hover:not(.header-btns){
+    color: grey;
+    transition-duration: 0.5s;
+}
+
+/* ========== DROP DOWN ========== */
+
+.drop-down{
+    background-color: #001f4d;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    left: 57%;
+    top: -400px;
+    transition: 0.5s;
+    z-index: 5;
+}
+.drop-down a{
+    display: block;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+}
+
+/* ========== HERO SECTION ========== */
+.hero{
+    background-image: url(images/ChatGPT\ Image\ Nov\ 18\,\ 2025\,\ 11_48_28\ AM.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:100px 30px 50px 50px;
+    display: flex;
+    gap: 100px;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ANIMATED PROFILE CARD */
+.profile-box{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    overflow:hidden;
+    position:relative;
+    border:2px solid white;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+.profile-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.profile-box {
+  animation: slideRight 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Keyframes for slide-right animation */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.hero-about {
+    animation: slideRL 1s ease forwards;
+}
+
+@keyframes slideRL {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.hero h1{
+    font-size:70px;
+    font-weight:700;
+}
+.hero p{
+    margin:15px 0;
+    font-size:20px;
+    line-height:1.5;
+}
+
+/* SOCIAL */
+.social{
+    margin-top:25px;
+}
+.social a{
+    margin-right:15px;
+    padding:10px 14px;
+    background:rgba(255,255,255,0.3);
+    border-radius:8px;
+    font-size:22px;
+    text-decoration:none;
+    display:inline-block;
+    color: white;
+}
+.social a:hover{
+    transform:translateY(-5px);
+    color: black;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-me{
+    margin-top: 40px;
+    color: black;
+    padding: 25px 60px;
+    background-color: white;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.5s ease-out;
+}
+.about-me h1{
+    font-size: 40px;
+}
+.about-me p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.about-me.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========== EDUCATION SECTION ========== */
+.education{
+    background:#fff9f0;
+    padding:60px 50px;
+    margin-top:40px;
+    color:#222;
+}
+body.dark .education{
+    background:#1b1b1b;
+    color:white;
+}
+
+.education h2{
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.edu-card{
+    background:#ffd29c;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:18px;
+    transition:0.3s;
+}
+#edu-card1:hover,#edu-card2:hover{
+    transform:translateX(10px) !important;
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+
+.edu-card h3{
+    margin-bottom:8px;
+    font-size:24px;
+}
+/* Start hidden */
+#edu-card1, #edu-card2 {
+    opacity: 0;
+    transition: 0.8s ease-out;
+}
+
+/* Slide Right → Left */
+#edu-card1.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#edu-card1 {
+    transform: translateX(80px); 
+}
+
+/* Slide Left → Right */
+#edu-card2.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#edu-card2 {
+    transform: translateX(-80px);
+}
+
+
+/* ========== SKILL SECTION ========== */
+.skills{
+    background:#fff2e6;
+    padding:60px 50px;
+    margin-top:40px;
+    color:#222;
+}
+.skillss{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    column-gap: 20px;
+}
+body.dark .skills{
+    background:#1c1c1c;
+    color:white;
+}
+
+.skills h2{
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.skill{
+    margin-bottom:25px;
+}
+
+.skill span{
+    font-size:20px;
+    font-weight:600;
+}
+.bar {
+    width: 100%;
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    background: #001a3d; /* dark blue */
+    width: 0; /* Start empty */
+    transition: width 1s ease-out;
+}
+
+
+/* ========== PROJECT SECTION ========== */
+.experience{
+    background:#fff2e6;
+    padding:60px 50px;
+    margin-top:40px;
+    color:#222;
+}
+body.dark .experience{
+    background:#1c1c1c;
+    color:white;
+}
+
+.experience h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+/* Project Cards */
+.experience-card{
+    background:#ffb066;
+    border-radius:15px;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    cursor:pointer;
+    transform:translateY(0);
+}
+.experience-card:hover{
+    transform:translateY(-7px) scale(1.02);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+.img-placeholder{
+    width:120px;
+    height:110px;
+    background:#ffe3c4;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+}
