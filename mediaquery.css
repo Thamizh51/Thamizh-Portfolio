@@ -1,0 +1,179 @@
+/* ===============================
+   MEDIA QUERIES FOR ALL DEVICES
+   =============================== */
+
+/* 🔵 Large Laptops (1440px ↓) */
+@media (max-width: 1440px) {
+    header {
+        padding: 20px 40px;
+    }
+    .hero h1 {
+        font-size: 60px;
+    }
+}
+
+/* 🔵 Laptops / Tablets Landscape (1200px ↓) */
+@media (max-width: 1200px) {
+    .hero {
+        gap: 60px;
+        padding: 80px 30px;
+    }
+    .hero h1 {
+        font-size: 55px;
+    }
+    .profile-box {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+/* 🔵 Tablets (992px ↓) */
+@media (max-width: 992px) {
+    nav a {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-about {
+        animation: none !important;
+    }
+
+    .profile-box {
+        margin-bottom: 10px;
+    }
+
+    .skillss {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* 🔵 Tablets & Large Phones (768px ↓) */
+@media (max-width: 768px) {
+    header {
+        padding: 18px 30px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .drop-down {
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .about-me {
+        padding: 20px 25px;
+    }
+
+    .education,
+    .skills,
+    .experience {
+        padding: 40px 25px;
+    }
+}
+
+/* 🔵 Mobile Phones (576px ↓) */
+@media (max-width: 576px) {
+    header h2 {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .profile-box {
+        width: 220px;
+        height: 220px;
+    }
+
+    .social a {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .edu-card,
+    .experience-card {
+        padding: 18px;
+    }
+}
+
+/* 🔵 Small Phones (430px ↓) */
+@media (max-width: 430px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .profile-box {
+        width: 190px;
+        height: 190px;
+    }
+
+    .about-me h1,
+    .education h2,
+    .skills h2,
+    .experience h2 {
+        font-size: 28px;
+    }
+}
+
+/* 🔵 Very Small Phones (360px ↓) */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .profile-box {
+        width: 170px;
+        height: 170px;
+    }
+
+    .social a {
+        margin-right: 8px;
+        padding: 6px 10px;
+    }
+}
